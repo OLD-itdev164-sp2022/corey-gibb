@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gatsby": "^4.5.5",
+    "gatsby-cli": "^4.5.2",
+    "gatsby-image": "^3.11.0",
+    "uuid": "^8.3.2"
+  }
+}
