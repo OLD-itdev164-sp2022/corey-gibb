@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
@@ -9,7 +13,6 @@ module.exports = {
       company: 'Blogs Inc.',
       address: 'PO Box 1234'
     },
-    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,8 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'sq63nj735mae',
-        accessToken: 'WLEwPVFPb_yA3h8PIpnvIfVc3scHDQBdg4U6S4ltXOo'
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
     {
@@ -28,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
