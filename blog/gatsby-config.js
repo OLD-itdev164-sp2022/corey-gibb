@@ -13,7 +13,6 @@ module.exports = {
       company: 'Blogs Inc.',
       address: 'PO Box 1234'
     },
-    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
