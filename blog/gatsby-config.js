@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `ITDEV-164 Gatsby Blog`,
+    description: 'ITDEV-164 Gatsby Blog',
     author: `Corey Gibb`,
     contact: {
       name: 'Corey Gibb',
-      company: 'Blogs Inc.',
+      company: 'Blogs Inc',
       address: 'PO Box 1234'
-    },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    }
+    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
