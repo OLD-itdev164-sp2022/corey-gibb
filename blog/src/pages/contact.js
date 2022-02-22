@@ -1,27 +1,33 @@
-
 import React from "react"
-import { Link, graphql }  from "gatsby"
+import { graphql, Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import Img from "gatsby-image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Contact = ({ data }) => {
-    const { name, company, address } = data.site.siteMetadata.contact
+    const { name, company, address } = data.site.siteMetadata.contact;
     return (
         <Layout>
-            <SEO title="Contact" />
+            <Seo title="Home" />
             <h1>Contact Us</h1>
+            <p>Please send all inqueries to: </p>
             <div>{company}</div>
-            <div>{`C/O ${name}`}</div>            
+            <div>{`C/O ${name}`}</div>
             <div>{address}</div>
-
-            <div style={{ maxWidth: `300px`, marginBottom: `1.45rem`}}>
-                <Img />
+            <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+            <StaticImage
+                src="../images/gatsby-astronaut.png"
+                width={300}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt="A Gatsby astronaut"
+                style={{ marginBottom: `1.45rem` }}
+                />
             </div>
             <Link to="/">Home</Link>
-        </Layout>
-    )
+            </Layout>
+        )
 }
 
 export default Contact

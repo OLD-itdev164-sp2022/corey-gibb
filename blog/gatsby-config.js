@@ -3,16 +3,24 @@ module.exports = {
     title: `Gatsby Blog`,
     description: `ITDEV-164 Gatsby Blog`,
     author: `Corey Gibb`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: 'Corey Gibb',
       company: 'Blogs Inc.',
       address: 'PO Box 1234'
     },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'sq63nj735mae',
+        accessToken: 'WLEwPVFPb_yA3h8PIpnvIfVc3scHDQBdg4U6S4ltXOo'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
