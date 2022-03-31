@@ -14,9 +14,6 @@ const Inner = styled.div`
   padding: 1.45rem 1.0875rem;
 `
 
-const H1 = styled.h1`
-  margin: 0px;
-`
 
 const StyledLink = styled(Link)`
   color: white;
@@ -29,11 +26,14 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <Outer>
     <Inner>
-      <H1>
-        <StyledLink to="/">
-          {siteTitle}
-        </StyledLink>
-      </H1>
+      <Section flex>
+        <Section width={11/12}>
+          <H1>
+            <StyledLink to="/">{siteTitle}</StyledLink>
+          </H1>
+        </Section>
+        <Section width={1/12}>Search</Section>
+      </Section>
     </Inner>
   </Outer>
 )
