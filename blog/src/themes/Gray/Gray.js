@@ -1,4 +1,7 @@
 import { withTheme } from "styled-components"
+import mainHeaderImage from './images/react.png'
+import { Search } from 'styled-icons/feather'
+
 const theme = {
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
     colors: {
